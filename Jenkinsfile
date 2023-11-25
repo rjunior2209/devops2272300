@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build TADS'){
             steps{
-                sh '''
+                sh'''
                 java --version
                 docker --version
                 '''
