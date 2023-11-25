@@ -6,7 +6,6 @@ pipeline{
                 sh '''
                 java --version
                 docker --version
-              
                 '''
             }
         }
