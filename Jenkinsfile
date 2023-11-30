@@ -6,6 +6,8 @@ pipeline{
                 bat'''
                 java --version
                 docker --version
+                docker compose version
+                docker info
                 '''
             }
         }
