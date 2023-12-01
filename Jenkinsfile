@@ -1,7 +1,7 @@
 pipeline{
 
     agent any
-       tools {nodejs 'slameubom'}
+       tools {nodejs 'node'}
 
     stages {
         stage('Start NodeGoat') {
