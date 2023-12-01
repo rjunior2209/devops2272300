@@ -21,14 +21,14 @@ pipeline{
         stage('Construindo Docker') {
             steps {
                 sh '''
-                    docker build .
+                    docker-compose build
                 '''
             }
         }
         stage('Compose Docker') {
             steps {
                 sh '''
-                    docker compose up
+                    docker-compose up
                 '''
             }
         }
