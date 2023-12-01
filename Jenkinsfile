@@ -3,30 +3,30 @@ pipeline{
     agent any
 
     stages {
-        stage('Install NPM') {
+        stage('Start NodeGoat') {
             steps {
-                bat '''
+                sh '''
                         npm install
                 '''
             }
         }
         stage('Test NPM') {
             steps {
-                bat '''
+                sh '''
                     npm test
                 '''
             }
         }
         stage('Construindo Docker') {
             steps {
-                bat '''
+                sh '''
                     docker build .
                 '''
             }
         }
         stage('Compose Docker') {
             steps {
-                bat '''
+                sh '''
                     docker compose up
                 '''
             }
