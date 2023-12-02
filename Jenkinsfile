@@ -6,30 +6,30 @@ pipeline{
     stages {
         stage('Start NodeGoat') {
             steps {
-                sh '
+                sh '''
                         npm install
-                '
+                '''
             }
         }
         stage('Test NPM') {
             steps {
-                sh '
+                sh '''
                     npm test
-                '
+                '''
             }
         }
         stage('Construindo Docker') {
             steps {
-                sh '
+                sh '''
                     docker-compose build
-                '
+                '''
             }
         }
         stage('Compose Docker') {
             steps {
-                sh '
+                sh '''
                     docker-compose up
-                '
+                '''
             }
         }
     }
