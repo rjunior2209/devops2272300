@@ -28,8 +28,9 @@ pipeline{
         stage('Compose Docker') {
             steps {
                 sh '''
+                
                     docker-compose up
-                    
+
                 '''
             }
         }
