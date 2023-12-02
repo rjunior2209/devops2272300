@@ -25,10 +25,22 @@ pipeline{
                 '''
             }
         }
+
+         stage('Testando Docker') {
+            steps {
+                echo 'Testing'
+                sh '''
+                    npm install
+                '''
+                  sh '''
+                    npm test
+                '''
+            }
+        }
         stage('Compose Docker') {
             steps {
                 sh '''
-                
+
                     docker-compose up
 
                 '''
